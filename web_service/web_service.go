@@ -29,7 +29,6 @@ func lissajous(w http.ResponseWriter, r *http.Request) {
 			c, err := strconv.Atoi(v[0])
 			if err != nil {
 				log.Println(err)
-				cycles = 5
 			} else {
 				cycles = float64(c)
 			}

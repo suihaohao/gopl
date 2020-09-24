@@ -1,13 +1,16 @@
 package main
 
 import (
-	"fmt"
-	"gopl/reverse"
+	"gopl/shuffle"
 )
 
 func main() {
 	//lissajous.RunLissajous()
 	//fetch_url.RunFetch()
 	//web_service.RunWebService()
-	fmt.Println(reverse.ReverseArr(&[]interface{}{1,2,3,4, "a", "b","c"}))
+	arr := make([]int, 1000)
+	for i := range arr {
+		arr[i] = i + 1
+	}
+	arr = shuffle.ShuffleArrInt(arr)
 }

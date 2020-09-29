@@ -1,7 +1,6 @@
 package main
 
 import (
-	"gopl/findlinks3"
 	"gopl/shuffle"
 )
 
@@ -14,5 +13,5 @@ func main() {
 		arr[i] = i + 1
 	}
 	arr = shuffle.ShuffleArrInt(arr)
-	findlinks3.RunBreadthFirst()
+	//findlinks3.RunBreadthFirst()
 }

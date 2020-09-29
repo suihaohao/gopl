@@ -41,11 +41,14 @@ func CountWordAndImages(url string)(words, images int, err error)  {
 }
 func countWordsAndImages(n *html.Node) (words, images int) {
 	if n.NextSibling != nil {
-		return countWordsAndImages(n.NextSibling)
+		w, i := countWordsAndImages(n.NextSibling)
+		words += w
+		images += i
+		return
 	}
 	if n.Type == html.ElementNode && n.Data == "image" {
 		words+=1
-		images+=1
+		//images+=1
 	}
 	return
 }

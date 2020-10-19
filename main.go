@@ -2,9 +2,8 @@ package main
 
 import (
 	"fmt"
-	"gopl/ch7/eval"
 	"gopl/shuffle"
-	"math"
+	"time"
 )
 
 func main() {
@@ -18,12 +17,13 @@ func main() {
 	arr = shuffle.ShuffleArrInt(arr)
 	//findlinks3.RunBreadthFirst()
 	//log.Fatal(http.ListenAndServe("localhost:8000", myHttp.Mux))
-	ru(func(x, y float64) float64 {
-		r := math.Hypot(x, y) // distance from (0,0)
-		return expr.Eval(eval.Env{"x": x, "y": y, "r": r})
-	})
+	//reverb.RunReverbHandleConn()
+	a := []int{1,2,3,4}
+	for _,m := range a {
+		go func() {
+			fmt.Println(m)
+		}()
+	}
+	time.Sleep(time.Second)
 }
 
-func ru(fn func(x, y float64) float64)  {
-	fmt.Printf(fn)
-}

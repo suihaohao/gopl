@@ -1,9 +1,8 @@
 package main
 
 import (
-	"fmt"
+	"gopl/ch8/chat"
 	"gopl/shuffle"
-	"time"
 )
 
 func main() {
@@ -18,12 +17,6 @@ func main() {
 	//findlinks3.RunBreadthFirst()
 	//log.Fatal(http.ListenAndServe("localhost:8000", myHttp.Mux))
 	//reverb.RunReverbHandleConn()
-	a := []int{1,2,3,4}
-	for _,m := range a {
-		go func() {
-			fmt.Println(m)
-		}()
-	}
-	time.Sleep(time.Second)
+	chat.RunChat()
 }
 

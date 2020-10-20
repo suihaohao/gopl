@@ -9,7 +9,7 @@ import (
 )
 
 func main()  {
-	netcat2()
+	netcat3()
 }
 
 func netcat1(){

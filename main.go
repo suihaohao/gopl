@@ -1,7 +1,6 @@
 package main
 
 import (
-	"gopl/ch8/chat"
 	"gopl/shuffle"
 )
 
@@ -17,6 +16,6 @@ func main() {
 	//findlinks3.RunBreadthFirst()
 	//log.Fatal(http.ListenAndServe("localhost:8000", myHttp.Mux))
 	//reverb.RunReverbHandleConn()
-	chat.RunChat()
+
 }
 

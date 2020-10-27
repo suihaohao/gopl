@@ -118,9 +118,4 @@ func (c call) Check(vars map[Var]bool) error {
 	return nil
 }
 
-func Parse(s string) (Expr, error) {
-	//todo
-	return nil, nil
-}
-
 var numParams = map[string]int{"pow": 2, "sin": 1, "sqrt": 1}

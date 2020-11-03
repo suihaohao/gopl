@@ -1,7 +1,6 @@
 //Learning URL https://books.studygolang.com/gopl-zh/
 package equal
 
-import "C"
 import (
 	"reflect"
 	"unsafe"
@@ -27,7 +26,7 @@ func equal(x, y reflect.Value, seen map[comparison]bool) bool {
 		}
 		c := comparison{xptr, yptr, x.Type()}
 		if seen[c] {
-			return true // already seen
+			return true
 		}
 		seen[c] = true
 	}
